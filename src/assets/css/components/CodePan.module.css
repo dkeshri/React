@@ -1,6 +1,5 @@
 .container{
     color: grey;
-    width: 100%;
     display: flex;
     flex-direction: column;
     border: 1px solid grey;
@@ -8,8 +7,7 @@
 }
 .SourceCode_Container{
     max-height: 450px;
-    width: 100%;
-    overflow: overlay;
+    overflow-y: overlay;
 }
 .close{
     color: red;
@@ -26,6 +24,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 25px;
+    z-index: 10;
 }
 .footer{
     height: 3rem;
@@ -34,6 +33,7 @@
     border-radius: 5px;
     justify-content: flex-end;
     align-items: center;
+    z-index: 10;
 }
 .btn_container{
     border: 1px solid grey;

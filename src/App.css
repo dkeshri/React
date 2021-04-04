@@ -12,7 +12,7 @@
   --skillProgressBarBorderColor:#1d8997;
   --navBarHeight:3.4rem;
   --LogoBorderColor:#3f3f72;
-  --varSourceCodeContainerColor:#ab9c9c;
+  --varSourceCodeContainerColor:white;
 }
 * {
   margin: 0;
