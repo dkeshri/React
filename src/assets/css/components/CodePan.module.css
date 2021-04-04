@@ -5,10 +5,6 @@
     border: 1px solid grey;
     border-radius: 5px;
 }
-.SourceCode_Container{
-    max-height: 450px;
-    overflow: overlay;
-}
 .close{
     color: red;
     cursor: pointer;
@@ -52,7 +48,10 @@
 .View_source:hover{
     color: var(--LogoBorderColor);
 }
-
+.SourceCode_Container{
+    max-height: 450px;
+    overflow-y: overlay;
+}
 .SourceCode_Container::-webkit-scrollbar {
     width: 9px;
   }
@@ -67,7 +66,7 @@
     background-color: rgb(201, 193, 193);
   }
   @media screen and (max-width:400px){
-    .container{
+    .SourceCode_Container{
         width: 350px;
     }
   }

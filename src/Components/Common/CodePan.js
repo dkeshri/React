@@ -8,12 +8,6 @@ const CodePan = () => {
     }
     return (
         <div className={styles.container}>
-            {/* <div className={styles.Header}>
-                <h3>Source Code</h3>
-                <i className={`fa fa-close ${styles.close}`} title="Close"
-                    onClick={onClickViweSource}
-                ></i>
-            </div> */}
             {isSourceCodeDisplay ? <>
                 <div className={styles.Header}>
                     <h3>Source Code</h3>
@@ -23,7 +17,8 @@ const CodePan = () => {
                 </div>
                 <div className={styles.SourceCode_Container}>
                     <SourceCode url='/Javascript/Utilfunction.js' />
-                </div></> : undefined}
+                </div>
+            </> : undefined}
             <div className={styles.footer}>
                 <div className={styles.btn_container}>
                     <i className={`fa fa-code ${styles.View_source}`} title="View Source"
