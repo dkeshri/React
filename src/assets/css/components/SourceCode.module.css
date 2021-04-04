@@ -1,7 +1,7 @@
 .container{
     background-color: var(--varSourceCodeContainerColor);
     display: flex;
-    padding: 15px;
+    margin: 15px;
     justify-content: center;
     align-items: center;
     color: black;
