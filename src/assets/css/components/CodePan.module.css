@@ -9,7 +9,7 @@
 .SourceCode_Container{
     max-height: 450px;
     width: 100%;
-    overflow-y: scroll;
+    overflow: overlay;
 }
 .close{
     color: red;
@@ -57,9 +57,13 @@
     width: 9px;
   }
   .SourceCode_Container::-webkit-scrollbar-track {
-    background: #ab9c9c;
+    background: var(--varSourceCodeContainerColor);
   }
   .SourceCode_Container::-webkit-scrollbar-thumb {
-    background-color: rgb(201, 193, 193);
-    border-radius: 20px;
+    background-color: var(--varSourceCodeContainerColor);
+    border-radius: 10px;
   }
+  .SourceCode_Container:hover::-webkit-scrollbar-thumb{
+    background-color: rgb(201, 193, 193);
+  }
+  

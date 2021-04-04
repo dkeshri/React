@@ -1,5 +1,5 @@
 .container{
-    background-color: #ab9c9c;
+    background-color: var(--varSourceCodeContainerColor);
     display: flex;
     padding: 15px;
     justify-content: center;
