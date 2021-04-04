@@ -4,7 +4,6 @@
     flex-direction: column;
     border: 1px solid grey;
     border-radius: 5px;
-    width: 400px;
 }
 .SourceCode_Container{
     max-height: 450px;
