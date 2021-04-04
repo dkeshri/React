@@ -9,8 +9,8 @@ function Formic() {
             title="Registration Form"
         // backgroundColor="#546874"
         >
-            <div className={`box`}>
-                <div>
+            <div className={`box ${style.box}`}>
+                <div className={style.test}>
                     Registration Form
                 </div>
                 <CodePan/>
