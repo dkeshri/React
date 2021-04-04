@@ -52,3 +52,14 @@
 .View_source:hover{
     color: var(--LogoBorderColor);
 }
+
+.SourceCode_Container::-webkit-scrollbar {
+    width: 9px;
+  }
+  .SourceCode_Container::-webkit-scrollbar-track {
+    background: #ab9c9c;
+  }
+  .SourceCode_Container::-webkit-scrollbar-thumb {
+    background-color: rgb(201, 193, 193);
+    border-radius: 20px;
+  }
