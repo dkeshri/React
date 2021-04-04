@@ -4,6 +4,7 @@
     flex-direction: column;
     border: 1px solid grey;
     border-radius: 5px;
+    width: 400px;
 }
 .SourceCode_Container{
     max-height: 450px;
@@ -66,4 +67,8 @@
   .SourceCode_Container:hover::-webkit-scrollbar-thumb{
     background-color: rgb(201, 193, 193);
   }
-  
+  @media screen and (max-width:400px){
+    .container{
+        width: 400px;
+    }
+  }
