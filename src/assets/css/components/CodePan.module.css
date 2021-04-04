@@ -7,7 +7,7 @@
 }
 .SourceCode_Container{
     max-height: 450px;
-    overflow-y: overlay;
+    overflow: overlay;
 }
 .close{
     color: red;
