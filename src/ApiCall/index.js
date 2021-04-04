@@ -51,7 +51,41 @@ export const httpRequest = (argData = {}) => {
       url: argData.url,
       method: argData.method, // default
       baseURL: staticProperty.baseUrl,
-      responseType: staticProperty.responseType,
+      params: argData.params,
+      data: argData.data,
+      transformRequest: [function (data, headers) {
+        // Do whatever you want to transform the data
+        return data;
+      }],
+      transformResponse: [function (data) {
+        // Do whatever you want to transform the data
+
+        return data;
+      }],
+    })
+      .then(res => {
+        fetchedData = res.data;
+        resolve({ fetchedData });
+      }).catch((e) => {
+        reject(new Error(e));
+      });
+  });
+  return promise;
+};
+
+
+//Promise close
+//https://raw.githubusercontent.com/dkeshri/React/master/src/Components/Javascript/Utilfunction.js
+
+export const httpGitHubRequest = (argData = {}) => {
+  let fetchedData = null;
+  let promise = new Promise((resolve, reject) => {
+    axios({
+      // `url` is the server URL that will be used for the request
+      url: argData.url,
+      method: argData.method, // default
+      baseURL: `https://raw.githubusercontent.com/dkeshri/React/master/src/Components`,
+      responseType: 'text',
       params: argData.params,
       data: argData.data,
       transformRequest: [function (data, headers) {
@@ -74,6 +108,3 @@ export const httpRequest = (argData = {}) => {
   });
   return promise;
 };
-
-
-//Promise close

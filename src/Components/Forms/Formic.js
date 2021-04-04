@@ -1,5 +1,6 @@
 import React from 'react'
 import style from '../../assets/css/components/forms/Formic.module.css'
+import CodePan from '../Common/CodePan'
 import PageContainer from '../Common/PageContainer'
 function Formic() {
     return (
@@ -12,12 +13,13 @@ function Formic() {
                 <div>
                     Registration Form
                 </div>
+                <CodePan/>
             </div>
-            <div className={`box ${style.box}`}>
+            {/* <div className={`box ${style.box}`}>
                 <div>
                     Registration Form
                 </div>
-            </div>
+            </div> */}
         </PageContainer>
     )
 }

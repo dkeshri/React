@@ -1,0 +1,21 @@
+.container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px 15px;
+    color: grey;
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.View_source{
+    cursor: pointer;
+}
+.View_source:hover{
+    color: var(--LogoBorderColor);
+    transform: scale(1.5);
+}
