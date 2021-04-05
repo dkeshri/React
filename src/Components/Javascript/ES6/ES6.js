@@ -14,6 +14,13 @@ const ES6 = (props) => {
                 </div>
                 <CodePan url={props.url+'/ES6.js'}/>
             </div>
+            <br/>
+            <div className={`box ${style.box}`}>
+                <div className={style.test}>
+                    Registration Form
+                </div>
+                <CodePan url={props.url+'/ES6.js'}/>
+            </div>
         </PageContainer>
     )
 }
