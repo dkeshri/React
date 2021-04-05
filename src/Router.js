@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Switch, useLocation } from 'react-router-dom'
 import { ProtectedRoute } from './ProtectedRoute'
 import { config } from './data/NavMenuListConfig';
@@ -14,23 +14,20 @@ const getRouteComponent = (MenuConfig) => {
         if (item.path !== undefined)
             routeList.push(item);
     });
-    //return optionList;
 }
 getRouteComponent(config.menuItems);
-//<ProtectedRoute path={`${item.path}`} exact component={item.component} key={count++}/>
-//getItemFromMenuConfig(config.menuItems);
 export const AppRouter = () => {
     const location = useLocation();
-    const [RouteList, setRouteList] = useState();
-    // useEffect(() => {
-    //     setRouteList(routeList);
-    // }, [routeList]);
     return (
         <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.key}>
-                <ProtectedRoute path="/" exact component={Home}/>
+                <ProtectedRoute path="/" exact component={Home} />
                 {routeList.map((item, i) => {
-                    return <ProtectedRoute path={`${item.path}`} exact component={item.component} key={i} />
+                    if (item.openPage)
+                        return <ProtectedRoute path={`${item.path}`} url={item.path} exact component={item.component} key={i} openPage/>
+                    else
+                        return <ProtectedRoute path={item.path} url={item.path} exact component={item.component} key={i} />
+
                 })}
                 <ProtectedRoute path="*" exact component={PageNotFound} openPage />
             </Switch>

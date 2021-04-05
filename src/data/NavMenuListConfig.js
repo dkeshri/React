@@ -7,7 +7,7 @@ import CustomHooksDemo from '../Components/Dropdown'
 import DexieDemo from '../Components/Database/DexieDemo'
 import User from '../Components/JsonPlaceholder/User'
 import About from '../Components/About/About'
-import ES6 from '../Components/Javascript/ES6'
+import ES6 from '../Components/Javascript/ES6/ES6'
 const config = {
 
     menuItems: [
@@ -56,7 +56,7 @@ const config = {
             name: 'HooksConcepts',
             children: [{
                 name: 'CustomHooksDemo',
-                path: '/CustomHooksDemo',
+                path: '/Components/Dropdown',
                 component:CustomHooksDemo,
                 children: []
             }]
@@ -66,7 +66,7 @@ const config = {
             name: 'DatabaseConcept',
             children: [{
                 name: 'Dexie Database',
-                path: '/Database/Dexie',
+                path: '/Components/Database/DexieDemo',
                 component:DexieDemo,
                 children: []
             }]
@@ -78,6 +78,7 @@ const config = {
                 name: 'Login',
                 path: '/Login',
                 component:Login,
+                openPage:true,
                 children: []
             }]
         },

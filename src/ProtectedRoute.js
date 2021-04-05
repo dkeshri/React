@@ -18,7 +18,7 @@ const mainContentSectionVariants = {
         transition: { duration: .5, ease: 'easeInOut' }
     }
 }
-export const ProtectedRoute = ({ component: Component, openPage: isOpenPage, ...rest }) => {
+export const ProtectedRoute = ({ component: Component, openPage: isOpenPage,url, ...rest }) => {
     const isAuthenticated = AppConfig.isAuth;
     const history = useHistory()
     return (<Route
@@ -30,7 +30,7 @@ export const ProtectedRoute = ({ component: Component, openPage: isOpenPage, ...
                     initial="init"
                     animate="in"
                     exit="exit">
-                    <Component />
+                    <Component url={url}/>
                 </motion.div>
             } else if (isAuthenticated) {
                 return <div id="main">
@@ -40,7 +40,7 @@ export const ProtectedRoute = ({ component: Component, openPage: isOpenPage, ...
                         initial="init"
                         animate="in"
                         exit="exit">
-                        <Component />
+                        <Component url={url} />
                     </motion.div>
                     <div style={{ color: "white" }} className="footer">
                         <Footer />
@@ -52,7 +52,7 @@ export const ProtectedRoute = ({ component: Component, openPage: isOpenPage, ...
                     initial="init"
                     animate="in"
                     exit="exit">
-                    <Login />
+                    <Login url={url} />
                 </motion.div>
             }
 
