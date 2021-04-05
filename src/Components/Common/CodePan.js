@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../assets/css/components/CodePan.module.css'
 import SourceCode from './SourceCode'
-const CodePan = () => {
+const CodePan = (props) => {
     const [isSourceCodeDisplay, setourceCodeDisplay] = useState(false)
     const onClickViweSource = () => {
         setourceCodeDisplay(!isSourceCodeDisplay);
@@ -16,7 +16,7 @@ const CodePan = () => {
                     ></i>
                 </div>
                 <div className={styles.SourceCode_Container}>
-                    <SourceCode url='/Javascript/Utilfunction.js' />
+                    <SourceCode url={props.url} />
                 </div>
             </> : undefined}
             <div className={styles.footer}>

@@ -84,7 +84,7 @@ export const httpGitHubRequest = (argData = {}) => {
       // `url` is the server URL that will be used for the request
       url: argData.url,
       method: argData.method, // default
-      baseURL: `https://raw.githubusercontent.com/dkeshri/React/master/src/Components`,
+      baseURL: `https://raw.githubusercontent.com/dkeshri/React/master/src`,
       responseType: 'text',
       params: argData.params,
       data: argData.data,

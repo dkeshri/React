@@ -36,7 +36,7 @@ const SourceCode = (props) => {
                 animate="in"
                 exit="exit"
             >
-                {sourceCode}
+                {sourceCode!==undefined?sourceCode:'Loading...'}
             </motion.pre>
         </div>
     )

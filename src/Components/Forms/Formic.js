@@ -13,7 +13,7 @@ function Formic() {
                 <div className={style.test}>
                     Registration Form
                 </div>
-                <CodePan/>
+                <CodePan url='/Components/Forms/Formic.js'/>
             </div>
             {/* <div className={`box ${style.box}`}>
                 <div>
