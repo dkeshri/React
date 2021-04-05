@@ -2,7 +2,7 @@ import React from 'react'
 import style from '../../assets/css/components/forms/Formic.module.css'
 import CodePan from '../Common/CodePan'
 import PageContainer from '../Common/PageContainer'
-function Formic() {
+function Formic(props) {
     return (
         <PageContainer
             headerTitle="Formic Demos"
@@ -13,7 +13,7 @@ function Formic() {
                 <div className={style.test}>
                     Registration Form
                 </div>
-                <CodePan url='/Components/Forms/Formic.js'/>
+                <CodePan url={props.url+'.js'}/>
             </div>
             {/* <div className={`box ${style.box}`}>
                 <div>
