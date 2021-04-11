@@ -30,6 +30,21 @@
     flex-wrap: wrap;
     overflow-y: auto;
 }
+.box::-webkit-scrollbar {
+    width: 8px;
+  }
+.box::-webkit-scrollbar-track {
+    background: var(--scrollBGColor);
+    display: none;
+  }
+.box::-webkit-scrollbar-thumb {
+    background-color: var(--scrollColor);
+    border-radius: 20px;
+    display: none;
+  }
+  .box:hover::-webkit-scrollbar-thumb{
+      display: block;
+  }
 @media screen and (max-width: 845px) {
     .box{
         justify-content: center;
