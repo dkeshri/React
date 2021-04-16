@@ -8,18 +8,19 @@ import DexieDemo from '../Components/Database/DexieDemo'
 import User from '../Components/JsonPlaceholder/User'
 import About from '../Components/About/About'
 import ES6 from '../Components/Javascript/ES6/ES6'
+import JavaScriptMain from '../Components/Javascript/Programming/Main'
 const config = {
 
     menuItems: [
         {
             name: 'Home',
             path: '/Home',
-            component:Home,
+            component: Home,
         },
         {
             name: 'Test',
             path: '/Test',
-            component:Test,
+            component: Test,
         },
         {
             name: 'Components',
@@ -29,7 +30,7 @@ const config = {
                     {
                         name: 'Formic',
                         path: '/Components/Forms/Formic',
-                        component:FormicForm,
+                        component: FormicForm,
                     }
                 ]
             }]
@@ -39,8 +40,16 @@ const config = {
             children: [{
                 name: 'JavaScript ES6',
                 path: '/Components/Javascript/ES6',
-                component:ES6,
+                component: ES6,
                 children: []
+            },
+            {
+                name: 'Programming',
+                children: [{
+                    name: 'Programming',
+                    path: '/Components/Javascript/Programming/Main',
+                    component: JavaScriptMain
+                }]
             }]
         },
         {
@@ -48,7 +57,7 @@ const config = {
             children: [{
                 name: 'Gradient',
                 path: '/Test2',
-                component:ES6,
+                component: ES6,
                 children: []
             }]
         },
@@ -57,7 +66,7 @@ const config = {
             children: [{
                 name: 'CustomHooksDemo',
                 path: '/Components/Dropdown',
-                component:CustomHooksDemo,
+                component: CustomHooksDemo,
                 children: []
             }]
 
@@ -67,7 +76,7 @@ const config = {
             children: [{
                 name: 'Dexie Database',
                 path: '/Components/Database/DexieDemo',
-                component:DexieDemo,
+                component: DexieDemo,
                 children: []
             }]
 
@@ -77,8 +86,8 @@ const config = {
             children: [{
                 name: 'Login',
                 path: '/Login',
-                component:Login,
-                openPage:true,
+                component: Login,
+                openPage: true,
                 children: []
             }]
         },
@@ -87,16 +96,16 @@ const config = {
             children: [{
                 name: 'JsonPlaceHolder',
                 children: [{
-                    name:'JsonPlaceHolder User',
-                    path:'/Api/JsonPlaceHolder/Users',
-                    component:User,
+                    name: 'JsonPlaceHolder User',
+                    path: '/Api/JsonPlaceHolder/Users',
+                    component: User,
                 }]
             }]
         },
         {
             name: 'AboutUS',
-            path:'/About',
-            component:About,
+            path: '/About',
+            component: About,
             children: []
         }
     ]
